@@ -30,6 +30,7 @@ namespace BotFactory.Model
         }
         public async Task<bool> WorkEnds()
         {
+            //return true;
             return true;
         }
 
