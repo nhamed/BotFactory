@@ -5,9 +5,11 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFactory", "BotFactory\BotFactory.csproj", "{DD77A540-CF0A-4A21-A315-5209B1AB2054}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{C765BC6A-D9EF-4C34-BC20-45DE4883F8FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Model\Models.csproj", "{C765BC6A-D9EF-4C34-BC20-45DE4883F8FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{01C55346-5CE0-4532-8EEB-2F736D796631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factories", "Factories\Factories.csproj", "{F4E3737C-916D-4E5A-846D-5A5FB4CD3DEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{01C55346-5CE0-4532-8EEB-2F736D796631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C55346-5CE0-4532-8EEB-2F736D796631}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01C55346-5CE0-4532-8EEB-2F736D796631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4E3737C-916D-4E5A-846D-5A5FB4CD3DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E3737C-916D-4E5A-846D-5A5FB4CD3DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E3737C-916D-4E5A-846D-5A5FB4CD3DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E3737C-916D-4E5A-846D-5A5FB4CD3DEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

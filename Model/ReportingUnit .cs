@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BotFactory.Common;
+using BotFactory.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +8,15 @@ using System.Threading.Tasks;
 
 
 
-namespace BotFactory.Model
+namespace BotFactory.Models
 {
-    abstract public class ReportingUnit
+    abstract public class ReportingUnit : IReportingUnit
     {
 
         public event EventHandler UnitStatusChanged;
         public ReportingUnit() { }
 
-        protected virtual void OnStatusChanged (EventArgs StatusChangedEventArgs)
+        protected virtual void OnStatusChanged (EventArgs statusChangedEventArgs)
         {
             if (UnitStatusChanged !=null)
             {

@@ -1,12 +1,15 @@
-﻿using System;
+﻿using BotFactory.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BotFactory.Common;
+using BotFactory.Interface;
 
-namespace BotFactory.Model
+namespace BotFactory.Models
 {
-    abstract public class BuildableUnit : ReportingUnit
+    abstract public class BuildableUnit : ReportingUnit , IBuildableUnit
     {
 
 

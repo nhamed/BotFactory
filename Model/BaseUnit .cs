@@ -1,27 +1,28 @@
-﻿using BotFactory.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BotFactory.Tools;
+using BotFactory.Common;
+using BotFactory.Interface;
+using BotFactory.Common.Tools;
 
-namespace Botfactory.model
+namespace BotFactory.Models
 {
-    abstract public class BaseUnit : BuildableUnit
+    abstract public class BaseUnit : BuildableUnit , IBaseUnit 
     {
 
-        private int vitesse;
-        public string nom {get; set;}       
-        public int x { get; set; }
-        public int y { get; set; }
+        private double _vitesse;
+        public string Nom {get; set;}       
+        public int X { get; set; }
+        public int Y { get; set; }
         public Coordinates CurrentPos { set; get; }
        
-        public int Vitesse
+        public double Vitesse
         {
             get
             {
-                return vitesse;
+                return _vitesse;
             }
             set
             {
@@ -30,11 +31,11 @@ namespace Botfactory.model
 
 
         }   
-
+        public BaseUnit () {}
         public BaseUnit(string nom , int vitesse) 
         {
-            this.nom = nom;
-            this.vitesse = vitesse;
+            this.Nom = nom;
+            this._vitesse = vitesse;
             this.CurrentPos = new Coordinates(0.0, 0.0);
         }
 
@@ -51,7 +52,7 @@ namespace Botfactory.model
                 //sleep pendant le deplaceement du robo
                 await Task.Delay(Convert.ToInt16(t));
                 //calcule  temps de parcours
-                double temp = (v.Length(t)/ vitesse);
+                double temp = (v.Length(t)/ _vitesse);
               
                 return temp;
             }

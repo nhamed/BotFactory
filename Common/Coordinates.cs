@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace BotFactory.Tools
+using BotFactory.Interface;
+namespace BotFactory.Common.Tools
 {
-    public class Coordinates
+    public class Coordinates : ICoordinates
     {
         public double x { get; set; }
         public double y { get; set; }

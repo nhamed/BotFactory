@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BotFactory.Tools;
+using BotFactory.Models;
+using BotFactory.Common;
+using BotFactory.Interface;
+using BotFactory.Common.Tools;
 
-namespace BotFactory.Model
+namespace BotFactory.Models
 {
-    abstract public class WorkingUnit
+    abstract public class WorkingUnit : BaseUnit , IWorkingUnit
     {
 
         public Coordinates ParkingPos { get; set; }
         public Coordinates WorkingPos { get; set; }
         public bool IsWorking { get; set; }
 
-        public WorkingUnit() { }
+        public WorkingUnit() :base() { }
         public WorkingUnit(Coordinates parkingPos ,Coordinates workingPos ,bool isWorking)
         {
             this.ParkingPos = parkingPos;

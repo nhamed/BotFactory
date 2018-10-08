@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01C55346-5CE0-4532-8EEB-2F736D796631}</ProjectGuid>
+    <ProjectGuid>{F4E3737C-916D-4E5A-846D-5A5FB4CD3DEF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common</AssemblyName>
+    <RootNamespace>Factories</RootNamespace>
+    <AssemblyName>Factories</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,22 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coordinates.cs" />
-    <Compile Include="IBaseUnit.cs" />
-    <Compile Include="IBuildableUnit.cs" />
-    <Compile Include="ICoordinates.cs" />
-    <Compile Include="IFactoryQueueElement.cs" />
-    <Compile Include="IReportingUnit.cs" />
-    <Compile Include="IStatusChangedEventArgs.cs" />
-    <Compile Include="ITestingUnit.cs" />
-    <Compile Include="IUnitFactory.cs" />
-    <Compile Include="IVector.cs" />
-    <Compile Include="IWorkingUnit.cs" />
+    <Compile Include="FactoryQueueElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vector.cs" />
+    <Compile Include="UnitFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{01C55346-5CE0-4532-8EEB-2F736D796631}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Models.csproj">
+      <Project>{C765BC6A-D9EF-4C34-BC20-45DE4883F8FD}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
