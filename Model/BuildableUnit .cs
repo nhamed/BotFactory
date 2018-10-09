@@ -14,7 +14,7 @@ namespace BotFactory.Models
 
 
         public double BuildTime { get; set; }
-
+        public string Model { get; set; }
 
         public BuildableUnit()
         {

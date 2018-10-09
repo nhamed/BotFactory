@@ -11,8 +11,8 @@ namespace BotFactory.Factories
     public class UnitFactory : IUnitFactory
     {
 
-        public int QueueCapacity { get; set; }
-        public int StorageCapacity { get; set; }
+        private int QueueCapacity { get; set; }
+        private int StorageCapacity { get; set; }
         public UnitFactory() { }
         public UnitFactory(int taillequeue, int tailleentreprise)
         {

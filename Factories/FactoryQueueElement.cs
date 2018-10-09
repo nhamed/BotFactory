@@ -16,6 +16,8 @@ namespace BotFactory.Factories
         public Coordinates WorkingPos { get; set; }
         private Queue<FactoryQueueElement> _q;
         public Queue<FactoryQueueElement> queue { get; set; }
+        private bool QueueFreeSlots { get; set; }
+        private bool StorageFreeSlots { get; set; }
 
         public FactoryQueueElement() { }
 
