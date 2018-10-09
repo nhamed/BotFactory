@@ -16,9 +16,11 @@ namespace BotFactory.Common.Tools
             this.x = X;
             this.y = Y;
         }
-
-        public bool Equals(Coordinates c)
+        
+        public bool Equals(Coordinates objet)
         {
+
+            Coordinates c = objet as Coordinates;
             if (c != null)
             {
                if((c.x ==x)&&(c.y == y))

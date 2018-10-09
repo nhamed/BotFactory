@@ -9,8 +9,11 @@ using BotFactory.Common.Tools;
 
 namespace BotFactory.Models
 {
-    abstract public class BaseUnit : BuildableUnit , IBaseUnit 
+    abstract public class BaseUnit : BuildableUnit, IBaseUnit
     {
+
+        //Le client souhaite que tous les robots soient mobiles
+        //Le client souhaite que la vitesse par défaut des robots soit de 1 .
 
         private double _vitesse;
         public string Nom {get; set;}       

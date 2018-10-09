@@ -14,8 +14,8 @@ namespace BotFactory.Factories
         public Type Model { get; set; }
         public Coordinates ParkingPos { get; set; }
         public Coordinates WorkingPos { get; set; }
-        private Queue<FactoryQueueElement> _q;
-        public Queue<FactoryQueueElement> queue { get; set; }
+        //private Queue<FactoryQueueElement> _q;
+        public Queue<FactoryQueueElement> Queue { get; set; }
         private bool QueueFreeSlots { get; set; }
         private bool StorageFreeSlots { get; set; }
 

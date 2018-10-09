@@ -13,6 +13,11 @@ namespace BotFactory.Models
     {
         public string NewStatus { get; set; }
 
-        public StatusChangedEventArgs () { }
+        public StatusChangedEventArgs() { }
+
+        public StatusChangedEventArgs (string newstatus)
+        {
+            this.NewStatus = newstatus;
+        }
     }
 }

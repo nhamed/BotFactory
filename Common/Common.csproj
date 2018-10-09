@@ -48,11 +48,15 @@
     <Compile Include="IBuildableUnit.cs" />
     <Compile Include="ICoordinates.cs" />
     <Compile Include="IFactoryQueueElement.cs" />
+    <Compile Include="IHAL.cs" />
+    <Compile Include="IR2D2.cs" />
     <Compile Include="IReportingUnit.cs" />
     <Compile Include="IStatusChangedEventArgs.cs" />
     <Compile Include="ITestingUnit.cs" />
+    <Compile Include="IT_800.cs" />
     <Compile Include="IUnitFactory.cs" />
     <Compile Include="IVector.cs" />
+    <Compile Include="IWall_E.cs" />
     <Compile Include="IWorkingUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vector.cs" />

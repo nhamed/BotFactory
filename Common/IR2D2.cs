@@ -1,6 +1,6 @@
 ﻿namespace BotFactory.Interface
 {
-    public interface IUnitFactory
+    public interface IR2D2
     {
     }
 }
