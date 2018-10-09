@@ -9,8 +9,8 @@ namespace BotFactory.Interface
          Coordinates ParkingPos { get; set; }
          Coordinates WorkingPos { get; set; }
          bool IsWorking { get; set; }
-        async Task<bool> WorkBegins();
-        async Task<bool> WorkEnds();
+         Task<bool> WorkBegins();
+         Task<bool> WorkEnds();
 
 
 
