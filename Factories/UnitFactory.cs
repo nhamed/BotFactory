@@ -15,6 +15,8 @@ namespace BotFactory.Factories
         private int QueueCapacity { get; set; }
         private int StorageCapacity { get; set; }
         public Queue<FactoryQueueElement> Queue { get; set; }
+        private static readonly UnitFactory _instanceUnitFactory;
+        private static object obj = new object();
         public UnitFactory() { }
         public UnitFactory(int taillequeue, int tailleentreprise)
         {
@@ -28,22 +30,38 @@ namespace BotFactory.Factories
         public bool AddWorkableUnitToQueue(string nom, Type model, Coordinates parkingPos, Coordinates workingPos)
         {
 
-            {
-                if ((Queue.Count <= this.QueueCapacity) && ((Queue.Count <= this.StorageCapacity)))
-                    {
-                    FactoryQueueElement add = new FactoryQueueElement(nom, model, parkingPos, workingPos);
-                }
-            }
-            //- L’usine ne peut construire qu’un robot à la fois. 
             //- L’usine ne peut enregistrer plus de commandes si sa queue est pleine 
             //- L’usine ne peut construire plus de robots si son entrepôt est plein 
+            if ((Queue.Count <= this.QueueCapacity) && ((Queue.Count <= this.StorageCapacity)))
+            {
+                FactoryQueueElement add = new FactoryQueueElement(nom, model, parkingPos, workingPos);
+                Queue.Enqueue(add);
+                if (_instanceUnitFactory == null)
+                {
+                    lock (obj)
+                    {
+                        if (_instanceUnitFactory == null)
+                        {
+                            //  _instanceUnitFactory = add;
+                           
+                        }
+                    }
+
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //- L’usine ne peut construire qu’un robot à la fois. 
             //- On peut appeler l’ajout de commande n’importe quand 
             //- La méthode doit retourner false si la commande n’est pas enregistrée 
             //- La construction doit être active tant que la queue n’est pas vide ou l’entrepôt plein 
             //- La construction d’un robot doit être simulée et prendre le temps indiqué par la propriété BuildTime du robot 
 
 
-            return true;
+
         }
 
 
